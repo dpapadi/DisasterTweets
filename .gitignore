@@ -1,3 +1,7 @@
+*.csv
+*.pt
+use/
+
 # Editors
 .vscode/
 .idea/
