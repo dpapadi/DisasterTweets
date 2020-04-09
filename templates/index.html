@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Twitter Classification Web App</title>
+        <meta charset="utf-8">
+        <meta name="viewport"  content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Is this tweet related to a disastrous event or not?</h1>
+            <p>Enter your tweet below and click submit to find out...</p>
+            <form method="POST">
+                    <label for="review">TWEET:</label>
+                    <textarea class="form-control"  rows="5" name="tweet">{{r[1]}}</textarea>
+                <select value={{r[3]}} type="submit" name="model">
+                  <option value="lstm_model" {% if r[2] == "lstm_model" %} selected {% else %} {% endif %}>LSTMClassifier</option>
+                  <option value="snn_model" {% if r[2] == "snn_model" %} selected {% else %} {% endif %}>SNNClassifier</option>
+                </select>
+                <button type="submit" name="submit" class="btn btn-default">Submit</button>
+            </form>
+            <h1 class="bg-success" id="result"></h1>
+        
+        {% if r[0] == 0 %}
+        <h1 style="color:green;">THIS WAS A NORMAL TWEET</h1>
+        {% elif r[0] == 1 %}
+        <h1 style="color:red;">THIS WAS A DISASTROUS TWEET</h1>
+      {% else %} 
+       {% endif %}
+      </div>
+    </body>
+</html>

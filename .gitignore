@@ -1,6 +1,5 @@
 *.csv
 *.pt
-use/
 
 # Editors
 .vscode/
