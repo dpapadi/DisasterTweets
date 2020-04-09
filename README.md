@@ -15,19 +15,28 @@ Then:
 ```
 pip install -r requirements.txt
 ```
-
-2. Train the model
+2. Install GloVe embeddings:
+```
+mkdir glove
+wget http://nlp.stanford.edu/data/glove.twitter.27B.zip
+unzip glove/glove.twitter.27B.zip -d glove/
+```
+3. Install Universal Sentence Encoder
+```
+mkdir useqa3
+curl -L "https://tfhub.dev/google/universal-sentence-encoder-qa/3?tf-hub-format=compressed" | tar -zxvC useqa3/
+```
+4. Train the model
 ```
 python train.py --data data/train_simple.csv --model snn --store model_bin/snn.pt
 
 python train.py --data data/train_simple.csv --model lstm --store model_bin/lstm.pt
 ```
-
-3. Deploy the model
+5. Deploy the model
 ```
 python app.py
 ```
-4. Use the UI on:
+6. Use the UI on:
 ```
 http://0.0.0.0:5010/predict
 ```
