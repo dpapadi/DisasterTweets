@@ -1,5 +1,7 @@
-*.csv
 *.pt
+glove
+use
+submission.csv
 
 # Editors
 .vscode/
