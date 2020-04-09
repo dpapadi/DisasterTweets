@@ -1,4 +1,4 @@
-The goal of this project is the development and deployment of a text classifier that can identify disastrous tweets. Two models were trained for this task.
+The goal of this project is the development and deployment of a text classifier that can identify disastrous tweets. Two models were trained for this task.\
 (inspired by Kaggle's contest: https://www.kaggle.com/c/nlp-getting-started)
 1. An LSTM classifier
 2. A Fully Connected Neural Classifier
