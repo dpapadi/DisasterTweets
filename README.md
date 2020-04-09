@@ -4,7 +4,7 @@ The goal of this project is the development and deployment of a text classifier 
 2. A Fully Connected Neural Classifier
 The model's were deployed using a flask server.
 
-In order to use the server, several steps are necessary:
+In order to use the server, several steps are necessary:\
 First:
 ```
 cd <project root>
