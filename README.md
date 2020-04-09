@@ -6,7 +6,8 @@ Two models were trained for this task.
 
 The model's were deployed using a flask server.\
 In order to use the server, several steps are necessary.\
-First:
+First: \
+Make sure you run python version lower than 3.7 (tensorflow is not supported for python==3.7)
 ```
 cd <project root>
 ```
