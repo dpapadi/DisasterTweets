@@ -28,8 +28,9 @@ curl -L "https://tfhub.dev/google/universal-sentence-encoder-qa/3?tf-hub-format=
 ```
 4. Train the model
 ```
-python train.py --data data/train_simple.csv --model snn --store model_bin/snn.pt
+mkdir model_bin
 
+python train.py --data data/train_simple.csv --model snn --store model_bin/snn.pt
 python train.py --data data/train_simple.csv --model lstm --store model_bin/lstm.pt
 ```
 5. Deploy the model
